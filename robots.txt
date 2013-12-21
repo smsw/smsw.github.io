@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin
+Disallow: /subdomains
+Disallow: /wp_BKUP
+Disallow: /collab
+Disallow: /facebook-alhokair
+Allow: /

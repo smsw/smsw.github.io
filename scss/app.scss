@@ -1,0 +1,200 @@
+@import "settings";
+@import "foundation";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+$smsw-color-1: #94c83d;
+$smsw-color-2: #ffd503;
+$smsw-color-3: #00aeef;
+$smsw-color-4: #ec008c;
+$smsw-color-5: #f15722;
+
+body,
+h1, h2, h3, h4, h5, h6,
+button, .button {
+  font-family: "effra", helvetica, arial, sans-serif;
+}
+p {
+  font-weight: 100;
+}
+a {
+  @include transition(all 0.1s ease-in-out);
+  &:hover {color: $smsw-color-1}
+}
+
+// Charts core
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent {
+  display: inline-block;
+  line-height: 110px;
+  z-index: 2;
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
+// Charts custom
+.charts-no-svg {
+  display: none;
+}
+.label {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+h1,h2,h3,h4,h5 {
+  font-weight: bold;
+  color: $primary-color;
+}
+.loader_wrapper {
+  h2 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  h3 {
+    margin-top: 10px;
+    color: #777;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .charts-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .chart-wrapper {
+    position: absolute;
+  }
+  .chart-wrapper.first {
+    left: 100px;
+    top: 100px;
+  }
+  .chart-wrapper.second {
+    left: 50px;
+    top: 50px;
+  }
+  .chart-wrapper.third {
+    left: 0;
+    top: 0;
+  }
+  .chart {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+  }
+  .percentage {
+    position: absolute;
+    font-size: 12px;
+    color: #CCC;
+  }
+  .percentage.one {
+    top: 42px;
+    left: 100px;
+  }
+  .percentage.two {
+    top: 92px;
+    left: 210px;
+  }
+  .percentage.three {
+    top: 142px;
+    left: 310px;
+  }
+  .label {
+    position: absolute;
+    top: -15px;
+    color: #777;
+    background-color: transparent;
+    background-color: rgba(0,0,0,0);
+  }
+  .label.one {
+    left: 13px;
+  }
+  .label.two {
+    left: 67px;
+  }
+  .label.three {
+    left: 96px;
+  }
+}
+
+@media #{$small-up} {
+  .logo {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .intro {
+    margin: 20px 0;
+    text-align: center;
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+  .notify {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .thick-border {
+    margin-bottom: 0;
+    hr {
+      border: solid $smsw-color-1;
+      border-width: 12px 0 0;
+    }
+  }
+  .loader_wrapper {
+    height: 380px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media #{$medium-up} {
+  .logo {
+    text-align: left;
+    img {
+      height: 174px;
+      width: 200px;
+      border-right: 3px solid #94C83D;
+      padding-right: 40px;
+    }
+  }
+  .intro {
+    margin: 40px 0;
+    text-align: left;
+    h2 {
+      margin: -7px 0 20px 0;
+      font-size: 2rem;
+      line-height: 1.2;
+      text-align: left;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  }
+  .notify {
+    margin-bottom: 30px;
+  }
+  .thick-border {
+    margin-bottom: 30px;
+  }
+  .loader_wrapper {
+    height: 470px;
+  }
+}
