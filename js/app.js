@@ -60,7 +60,7 @@ $(function() {
 // Email capture
 $("#email").submit(function() {
 
-  var url = "contact.php"; // the script where you handle the form input.
+  var url = "http://smswmedia.com/contact.php"; // the script where you handle the form input.
 
   $.ajax({
     type: "POST",
